@@ -8,9 +8,9 @@ df = pd.read_csv(ofile,skiprows=1,delimiter=',',names=["date","open","close","hi
 
 
 def dataReader(data):
-    dfile = data.datauri
+    d_file = data.uri
     col_list = data.column_list
-    df = pd.read_csv(dfile, skiprows=1, delimiter=',',
+    df = pd.read_csv(d_file, skiprows=1, delimiter=',',
                      names=col_list,
                      index_col='date', parse_dates=True)
     return df
